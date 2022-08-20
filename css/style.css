@@ -391,6 +391,18 @@ h6 {
   display: block;
 }
 
+@supports (font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem )) {
+  .rating__body::before {
+    font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem )) {
+  .rating__body::before {
+    font-size: calc(1.25rem + 0.75 * (100vw - 48rem) / 13.9375);
+  }
+}
+
 .rating__active {
   position: absolute;
   width: 0%;
@@ -410,6 +422,18 @@ h6 {
   top: 0;
   left: 0;
   color: #0075FF;
+}
+
+@supports (font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem )) {
+  .rating__active::before {
+    font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , -1.3329596413rem  +  5.3811659193vw , 2rem )) {
+  .rating__active::before {
+    font-size: calc(1.25rem + 0.75 * (100vw - 48rem) / 13.9375);
+  }
 }
 
 .rating__items {
