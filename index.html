@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220820133043">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220824143046">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-
+			<div id="fix" class="fix-popap"></div>
 			<div class="header__top">
 
 				<div class="header__container container-top">
@@ -31,7 +31,7 @@
 							</ul>
 							<ul class="menu__list">
 								<li data-da=".list-group, 991" class="menu__item item-favorites"><a href="#" class="menu__link ">Избранное</a></li>
-								<li data-da=".list-group, 991" class="menu__item item-entry"><a href="#" class="menu__link ">Вход</a>
+								<li data-da=".list-group, 991" class="menu__item item-entry"><a href="#popup-enter" class="menu__link ">Вход</a>
 								</li>
 								<li class="menu__item button-place-ad"><a href="#" class="menu__link ">Разместить объявление</a></li>
 							</ul>
@@ -213,6 +213,62 @@
 					</div>
 				</div>
 			</div>
+			<div id="popup-enter" class="popap-main">
+				<div class="wrapper-popap">
+					<div class="backgraund-popap"></div>
+					<a class="popap-area" href="#fix"></a>
+					<div class="popap">
+						<div class="popap__container">
+							<div class="popap__title">Вход</div>
+							<div class="popap__content">
+								<div class="popap-form">
+									<div class="popap-form__block">
+										<input placeholder="Телефон или электронная почта" type="text">
+										<input class="input-popap-password" placeholder="Пароль" type="password">
+									</div>
+									<div class="input-label-block-popap">
+										<div class="popap-checkbox-block">
+											<input id='check-popap' type='checkbox' />
+											<label for='check-popap'><span></span>Запомнить пароль</label>
+
+										</div>
+										<a href="#" class="popap-link-forgot-password">Забыли пароль?</a>
+									</div>
+									<a href="#" class="popap-button-form">Войти</a>
+								</div>
+								<div class="popap-social">
+									<div class="popap-social__title">Войти через соцсети</div>
+									<div class="popap-social__links">
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/vk.svg" alt="logo vk">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/google.svg" alt="logo google">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/apple.svg" alt="logo aplle">
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="popap-registrstion">
+									<a href="#" class="popap-link-registration">Регистрация</a>
+									<div class="popap-info">Регистрируясь, вы подтверждаете согласие с условиями
+										использования сервиса и политикой обработки данных.</div>
+								</div>
+							</div>
+							<a href="#fix" class="button-popap-delet"></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
 		</header>
 		<main class="page">
 			<div class="main">
@@ -243,7 +299,7 @@
 							<a class="text-store__button" href="#">Все магазины</a>
 						</div>
 						<div class="store__cards cards-store">
-							<div class="cards-store__card">
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -257,8 +313,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -272,8 +328,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -287,8 +343,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -302,8 +358,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -317,8 +373,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -332,8 +388,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -347,8 +403,8 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
-							<div class="cards-store__card">
+							</a>
+							<a href="#" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -362,7 +418,7 @@
 									</div>
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
-							</div>
+							</a>
 						</div>
 					</div>
 					<div class="store">
@@ -371,7 +427,7 @@
 							<a class="text-store__button" href="#">Все объявления</a>
 						</div>
 						<div class="store__cards cards-store">
-							<div class="cards-store__card-block">
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-1' type='checkbox' />
@@ -392,8 +448,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-2' type='checkbox' />
@@ -414,8 +470,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-3' type='checkbox' />
@@ -436,8 +492,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-4' type='checkbox' />
@@ -458,8 +514,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-5' type='checkbox' />
@@ -480,8 +536,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-6' type='checkbox' />
@@ -502,8 +558,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-7' type='checkbox' />
@@ -524,8 +580,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-8' type='checkbox' />
@@ -546,8 +602,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-9' type='checkbox' />
@@ -568,8 +624,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-10' type='checkbox' />
@@ -590,8 +646,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-11' type='checkbox' />
@@ -612,8 +668,8 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
-							<div class="cards-store__card-block">
+							</a>
+							<a href="#" class="cards-store__card-block">
 								<div class="cards-store__card">
 									<div class="check-card">
 										<input id='check-card-12' type='checkbox' />
@@ -634,7 +690,7 @@
 								<div class="cards-store__data">
 									16 июля 21:10
 								</div>
-							</div>
+							</a>
 
 						</div>
 					</div>
@@ -643,11 +699,105 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__logo-block">
+
+						<div class="footer__block">
+							<a href="#" class="footer__logo">KarsBusiness</a>
+							<div class="footer__logo-object">LOGO</div>
+						</div>
+						<a class="button-link footer-button-add" href="#">Разместить объявление</a>
+
+					</div>
+					<div class="footer__items">
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__block-form">
+						<div class="footer__block-form-wrapper">
+							<div class="footer__form">
+								<h4>Подписка на новости</h4>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваш email" class="input">
+								<a class="button-link button-footer-form" href="#">Подписаться</a>
+							</div>
+							<div class="footer__social">
+								<h4>Мы в социальных сетях</h4>
+								<div class="footer__social-buttons">
+									<a class="button-social" href="#">
+										<div class="social-vk-ibg">
+											<img src="img/footer/vk.svg" alt="vk">
+										</div>
+									</a>
+									<a class="button-social " href="#">
+										<div class="social-telegram-ibg">
+											<img src="img/footer/telegram.svg" alt="telegram">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__line-decor"></div>
+			<div class="footer__down">
+				<div class="footer__container">
+					<div class="footer__down-content">
+						<div class="footer__down-links">
+							<a class="footer-down-link" href="#"><span>Правила сервиса</span></a>
+							<a class="footer-down-link" href="#"><span>Пользовательское соглашение</span></a>
+							<a class="footer-down-link" href="#"><span>Оферта</span></a>
+							<a class="footer-down-link" href="#"><span>Служба поддержки</span></a>
+						</div>
+						<div class="footer__down-info-block">
+							<div class="footer__down-info">2022, KarsBusiness</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220820133043"></script>
+	<script src="js/app.min.js?_v=20220824143046"></script>
 </body>
 
 </html>
