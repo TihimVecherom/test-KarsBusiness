@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Кабинет</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220825235330">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+
+			<div id="fix" class="fix-popap"></div>
+			<div class="header__top">
+
+				<div class="header__container container-top">
+					<a href="index.html" class="header__logo">KarsBusiness</a>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<div class="header__menu menu">
+
+						<nav class="menu__body">
+							<ul class="menu__list list-group">
+								<li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Туризм</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Поддержка</a></li>
+							</ul>
+							<ul class="menu__list">
+								<li data-da=".list-group, 991" class="menu__item item-favorites"><a href="#" class="menu__link ">Избранное</a></li>
+								<li data-da=".list-group, 991" class="menu__item item-entry"><a href="#popup-enter" class="menu__link ">Вход</a>
+								</li>
+								<li class="button-place-ad"><a href="test.html" class="menu__link ">Разместить объявление</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="popup-enter" class="popap-main">
+				<div class="wrapper-popap">
+					<div class="backgraund-popap"></div>
+					<a class="popap-area" href="#fix"></a>
+					<div class="popap">
+						<div class="popap__container">
+							<div class="popap__title">Вход</div>
+							<div class="popap__content">
+								<div class="popap-form">
+									<div class="popap-form__block">
+										<input placeholder="Телефон или электронная почта" type="text">
+										<input class="input-popap-password" placeholder="Пароль" type="password">
+									</div>
+									<div class="input-label-block-popap">
+										<div class="popap-checkbox-block">
+											<input id='check-popap' type='checkbox' />
+											<label for='check-popap'><span></span>Запомнить пароль</label>
+
+										</div>
+										<a href="#" class="popap-link-forgot-password">Забыли пароль?</a>
+									</div>
+									<a href="cabinet.html" class="popap-button-form">Войти</a>
+								</div>
+								<div class="popap-social">
+									<div class="popap-social__title">Войти через соцсети</div>
+									<div class="popap-social__links">
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/vk.svg" alt="logo vk">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/google.svg" alt="logo google">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/apple.svg" alt="logo aplle">
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="popap-registrstion">
+									<a href="#" class="popap-link-registration">Регистрация</a>
+									<div class="popap-info">Регистрируясь, вы подтверждаете согласие с условиями
+										использования сервиса и политикой обработки данных.</div>
+								</div>
+							</div>
+							<a href="#fix" class="button-popap-delet"></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220825235330"></script>
+		</header>
+		<header class="header">
+			<div class="header__body body-pages-bg">
+				<div class="header__container">
+					<div class="header__content ">
+						<div class="header__sort sort-header-peges">
+							<select name="form[]" class="form select-categories">
+								<option value="1" selected>Любая категория</option>
+								<option value="2">категория</option>
+								<option value="3">категория</option>
+								<option value="4">категория</option>
+							</select>
+							<input class="select-link-ad" type="search" placeholder="Поиск по объявлениям">
+							<select name="form[]" class="form select-region">
+								<option value="1" selected>Область или край</option>
+								<option value="2">Область или край</option>
+								<option value="3">Область или край</option>
+								<option value="4">Область или край</option>
+							</select>
+							<select name="form[]" class="form select-sity">
+								<option value="1" selected>Город</option>
+								<option value="2">Город</option>
+								<option value="3">Город</option>
+								<option value="4">Город</option>
+							</select>
+							<button class="button-search-sort">Найти</button>
+						</div>
+						<div class="header__check">
+							<div class="check-sort">
+								<input id='check-1' type='checkbox' />
+								<label for='check-1'>
+									<span>Туризм</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-2' type='checkbox' />
+								<label for='check-2'>
+									<span>Недвижимость</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-3' type='checkbox' />
+								<label for='check-3'>
+									<span>Транспорт</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-4' type='checkbox' />
+								<label for='check-4'>
+									<span>Бизнес</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-5' type='checkbox' />
+								<label for='check-5'>
+									<span>Услуги</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-6' type='checkbox' />
+								<label for='check-6'>
+									<span>Дети</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-7' type='checkbox' />
+								<label for='check-7'>
+									<span>Одежда</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-8' type='checkbox' />
+								<label for='check-8'>
+									<span>Здоровье</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-9' type='checkbox' />
+								<label for='check-9'>
+									<span>Красота</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-10' type='checkbox' />
+								<label for='check-10'>
+									<span>Красота</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-11' type='checkbox' />
+								<label for='check-11'>
+									<span>Красота</span>
+								</label>
+							</div>
+							<div class="check-sort">
+								<input id='check-12' type='checkbox' />
+								<label for='check-12'>
+									<span>Красота</span>
+								</label>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="ticket">
+				<div class="ticket__container">
+					<div class="ticket__points">
+						<a class="point" href="#">Главная</a>
+						<span>/</span>
+						<a class="point" href="#">Товары для детей</a>
+						<span>/</span>
+						<a class="point" href="#">Товары для детей</a>
+					</div>
+					<div class="ticket__block-content">
+						<div class="ticket__swiper">
+							<div class="ticket__swiper-block-title">
+								<div class="ticket__swiper-title">iPhone 8 Plus 64 Gb BLACK</div>
+								<div class="ticket__swiper-data">15 июля 2022</div>
+							</div>
+
+							<div class="swiper image-swiper">
+								<!-- Additional required wrapper -->
+
+								<div class="swiper-wrapper image-swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/1.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/2.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/3.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/4.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/5.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="swiper-slide image-swiper-slide">
+										<div class="image-swiper-slide__picture-ibg_contain">
+											<img src="img/ticket/product/6.jpg" alt="Photo">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="image-mini-slider">
+								<div class="image-mini-slider__wrapper swiper-wrapper">
+									<!-- Slides -->
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/1.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/2.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/3.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/4.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/5.jpg" alt="Photo">
+										</div>
+									</div>
+									<div class="image-mini-slider__slide swiper-slide ">
+										<div class="image-mini-slider__picture-ibg_contain">
+											<img src="img/ticket/product/6.jpg" alt="Photo">
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="ticket__content">
+							<div class="ticket__price">15 000 000 ₽</div>
+							<div class="ticket__block-button">
+								<a class="button-ticket ticket-button-bg" href="#">Показать номер</a>
+								<a class="button-ticket" href="#">Написать продавцу</a>
+							</div>
+							<div class="ticket-person">
+								<div class="ticket-person__block-person">
+									<div class="ticket-person__photo-ibg">
+										<img src="#" alt="Photo">
+									</div>
+									<div class="ticket-person__info">
+										<div class="ticket-person__block-name">
+											<div class="ticket-person__name">Константин</div>
+											<div class="ticket-person__surname">Константинович</div>
+										</div>
+										<div class="ticket-person__state">Частное лицо</div>
+										<div class="ticket-person__state-data">На KarsBussiness c октября 2022</div>
+									</div>
+								</div>
+								<div class="ticket-person__text">
+									<div class="ticket-person__text-title">Описание</div>
+									<div class="ticket-person__text-paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Donec tristique consectetur nisi sed posuere. Interdum et malesuada fames ac ante
+										ipsum primis in faucibus. Aliquam at odio elit. Aenean interdum orci at urna pretium
+										facilisis. Phasellus ultrices mi est, interdum efficitur elit tincidunt id. Nullam leo
+										felis, vehicula quis odio sed, tempus condimentum elit. Sed quis nibh non velit dapibus
+										dignissim. Nunc faucibus ultricies mollis. Nullam id eleifend magna. Maecenas auctor vitae
+										lectus nec mattis. Duis semper luctus arcu sit amet aliquet. Vestibulum vestibulum diam
+										dolor, non vehicula quam malesuada sit amet. In vel blandit tellus. Nullam id bibendum
+										velit, sit amet sodales velit.</div>
+									<div class="ticket-person__block-location">
+										<div class="ticket-person__title-location">Город </div>
+										<div class="ticket-person__location">Тюмень, Тюменская область</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__logo-block">
+
+						<div class="footer__block">
+							<a href="#" class="footer__logo">KarsBusiness</a>
+							<div class="footer__logo-object">LOGO</div>
+						</div>
+						<a class="button-link footer-button-add" href="#">Разместить объявление</a>
+
+					</div>
+					<div class="footer__items">
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+						<div class="footer__items-block">
+							<h4>Недвижимость</h4>
+							<ul class="items">
+								<li class="item"><a href="#" class="link">Туризм</a></li>
+								<li class="item"><a href="#" class="link">Бизнес</a></li>
+								<li class="item"><a href="#" class="link">Услуги</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+								<li class="item"><a href="#" class="link">Дети</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__block-form">
+						<div class="footer__block-form-wrapper">
+							<div class="footer__form">
+								<h4>Подписка на новости</h4>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваш email" class="input">
+								<a class="button-link button-footer-form" href="#">Подписаться</a>
+							</div>
+							<div class="footer__social">
+								<h4>Мы в социальных сетях</h4>
+								<div class="footer__social-buttons">
+									<a class="button-social" href="#">
+										<div class="social-vk-ibg">
+											<img src="img/footer/vk.svg" alt="vk">
+										</div>
+									</a>
+									<a class="button-social " href="#">
+										<div class="social-telegram-ibg">
+											<img src="img/footer/telegram.svg" alt="telegram">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__line-decor"></div>
+			<div class="footer__down">
+				<div class="footer__container">
+					<div class="footer__down-content">
+						<div class="footer__down-links">
+							<a class="footer-down-link" href="#"><span>Правила сервиса</span></a>
+							<a class="footer-down-link" href="#"><span>Пользовательское соглашение</span></a>
+							<a class="footer-down-link" href="#"><span>Оферта</span></a>
+							<a class="footer-down-link" href="#"><span>Служба поддержки</span></a>
+						</div>
+						<div class="footer__down-info-block">
+							<div class="footer__down-info">2022, KarsBusiness</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/app.min.js?_v=20220825235330"></script>
+</body>
+
+</html>

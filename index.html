@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220824143046">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220825235330">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +15,12 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
+
 			<div id="fix" class="fix-popap"></div>
 			<div class="header__top">
 
 				<div class="header__container container-top">
-					<a href="#" class="header__logo">KarsBusiness</a>
+					<a href="index.html" class="header__logo">KarsBusiness</a>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<div class="header__menu menu">
 
@@ -33,13 +34,75 @@
 								<li data-da=".list-group, 991" class="menu__item item-favorites"><a href="#" class="menu__link ">Избранное</a></li>
 								<li data-da=".list-group, 991" class="menu__item item-entry"><a href="#popup-enter" class="menu__link ">Вход</a>
 								</li>
-								<li class="menu__item button-place-ad"><a href="#" class="menu__link ">Разместить объявление</a></li>
+								<li class="button-place-ad"><a href="test.html" class="menu__link ">Разместить объявление</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 
 			</div>
+
+			<div id="popup-enter" class="popap-main">
+				<div class="wrapper-popap">
+					<div class="backgraund-popap"></div>
+					<a class="popap-area" href="#fix"></a>
+					<div class="popap">
+						<div class="popap__container">
+							<div class="popap__title">Вход</div>
+							<div class="popap__content">
+								<div class="popap-form">
+									<div class="popap-form__block">
+										<input placeholder="Телефон или электронная почта" type="text">
+										<input class="input-popap-password" placeholder="Пароль" type="password">
+									</div>
+									<div class="input-label-block-popap">
+										<div class="popap-checkbox-block">
+											<input id='check-popap' type='checkbox' />
+											<label for='check-popap'><span></span>Запомнить пароль</label>
+
+										</div>
+										<a href="#" class="popap-link-forgot-password">Забыли пароль?</a>
+									</div>
+									<a href="cabinet.html" class="popap-button-form">Войти</a>
+								</div>
+								<div class="popap-social">
+									<div class="popap-social__title">Войти через соцсети</div>
+									<div class="popap-social__links">
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/vk.svg" alt="logo vk">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/google.svg" alt="logo google">
+											</div>
+										</a>
+										<a class="popap-social__link" href="#">
+											<div class="popap-social__link-ibg ">
+												<img src="img/popap/apple.svg" alt="logo aplle">
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="popap-registrstion">
+									<a href="#" class="popap-link-registration">Регистрация</a>
+									<div class="popap-info">Регистрируясь, вы подтверждаете согласие с условиями
+										использования сервиса и политикой обработки данных.</div>
+								</div>
+							</div>
+							<a href="#fix" class="button-popap-delet"></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220825235330"></script>
+		</header>
+		<header class="header">
+
+
 			<div class="header__body">
 				<div class="header__container">
 					<div class="header__content">
@@ -55,7 +118,7 @@
 								<option value="3">категория</option>
 								<option value="4">категория</option>
 							</select>
-							<a class="select-link-ad" href="#">Поиск по объявлениям</a>
+							<input class="select-link-ad" type="search" placeholder="Поиск по объявлениям">
 							<select name="form[]" class="form select-region">
 								<option value="1" selected>Область или край</option>
 								<option value="2">Область или край</option>
@@ -213,62 +276,6 @@
 					</div>
 				</div>
 			</div>
-			<div id="popup-enter" class="popap-main">
-				<div class="wrapper-popap">
-					<div class="backgraund-popap"></div>
-					<a class="popap-area" href="#fix"></a>
-					<div class="popap">
-						<div class="popap__container">
-							<div class="popap__title">Вход</div>
-							<div class="popap__content">
-								<div class="popap-form">
-									<div class="popap-form__block">
-										<input placeholder="Телефон или электронная почта" type="text">
-										<input class="input-popap-password" placeholder="Пароль" type="password">
-									</div>
-									<div class="input-label-block-popap">
-										<div class="popap-checkbox-block">
-											<input id='check-popap' type='checkbox' />
-											<label for='check-popap'><span></span>Запомнить пароль</label>
-
-										</div>
-										<a href="#" class="popap-link-forgot-password">Забыли пароль?</a>
-									</div>
-									<a href="#" class="popap-button-form">Войти</a>
-								</div>
-								<div class="popap-social">
-									<div class="popap-social__title">Войти через соцсети</div>
-									<div class="popap-social__links">
-										<a class="popap-social__link" href="#">
-											<div class="popap-social__link-ibg ">
-												<img src="img/popap/vk.svg" alt="logo vk">
-											</div>
-										</a>
-										<a class="popap-social__link" href="#">
-											<div class="popap-social__link-ibg ">
-												<img src="img/popap/google.svg" alt="logo google">
-											</div>
-										</a>
-										<a class="popap-social__link" href="#">
-											<div class="popap-social__link-ibg ">
-												<img src="img/popap/apple.svg" alt="logo aplle">
-											</div>
-										</a>
-									</div>
-								</div>
-								<div class="popap-registrstion">
-									<a href="#" class="popap-link-registration">Регистрация</a>
-									<div class="popap-info">Регистрируясь, вы подтверждаете согласие с условиями
-										использования сервиса и политикой обработки данных.</div>
-								</div>
-							</div>
-							<a href="#fix" class="button-popap-delet"></a>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
 		</header>
 		<main class="page">
 			<div class="main">
@@ -282,7 +289,7 @@
 							</div>
 							<div class="billboard__buttons">
 								<button class="billboard-button" href="#">Укажите область</button>
-								<button class="billboard-button" href="#">Укажите область</button>
+								<button class="billboard-button" href="#">Укажите город</button>
 								<button class="billboard-button button-billboard-search" href="#">Найти</button>
 							</div>
 						</div>
@@ -299,7 +306,7 @@
 							<a class="text-store__button" href="#">Все магазины</a>
 						</div>
 						<div class="store__cards cards-store">
-							<a href="#" class="cards-store__card">
+							<a href="store.html" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -314,7 +321,7 @@
 								</div>
 								<div class="cards-store__card-title">Название магазина</div>
 							</a>
-							<a href="#" class="cards-store__card">
+							<a href="product.html" class="cards-store__card">
 								<div class="rating">
 									<div class="rating__body">
 										<div class="rating__active" style="width: 80%;"></div>
@@ -797,7 +804,8 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220824143046"></script>
+	<script src="js/app.min.js?_v=20220825235330"></script>
 </body>
+
 
 </html>
