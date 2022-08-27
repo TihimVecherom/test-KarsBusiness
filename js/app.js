@@ -4199,6 +4199,10 @@
                     el: ".image-mini-slider",
                     slidesPerView: 6,
                     breakpoints: {
+                        280: {
+                            slidesPerView: 3,
+                            spaceBetween: 10
+                        },
                         320: {
                             slidesPerView: 5,
                             spaceBetween: 10
@@ -4342,17 +4346,43 @@
         menuBurger.classList.toggle("_icon-menu-active");
         if (menuBody) menuBody.classList.toggle("_menu-active");
     }));
+    function makeid() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < 7; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
+        return text;
+    }
+    function AddInputField() {
+        var inputs_c = $(".block-add-photo > label").length;
+        var new_id = makeid();
+        if (inputs_c < 5) {
+            var new_input = '<label class="label-add-photo-ibg 12" for="imageFileNew_' + new_id + '"><input class="input-add-photo imageFile" id="imageFileNew_' + new_id + '" type="file" accept="image/*" /><img class="prevImage" src="#" alt=""' + new_id + '  style="display:none" /><button class="delet-photo"></button></label>';
+            $(".block-add-photo").append(new_input);
+        }
+    }
     function readURL(input) {
+        var parent = input.closest("label");
         if (input.files && input.files[0]) {
             var reader = new FileReader;
             reader.onloadend = function(e) {
-                $("#prevImage").attr("src", e.target.result);
+                $(parent).find("img").attr("src", e.target.result).show();
             };
             reader.readAsDataURL(input.files[0]);
+            AddInputField();
         }
     }
-    $("#imageFile").change((function() {
+    $(".block-add-photo").on("change", ".imageFile", (function() {
         readURL(this);
+    }));
+    $(".block-add-photo").on("click", ".delet-photo", (function() {
+        var inputs_c = $(".block-add-photo > label").length;
+        console.log(inputs_c);
+        var parent = $(this).closest("label");
+        $(parent).find("input");
+        if (inputs_c > 1) $(parent).remove(); else {
+            $(parent).remove();
+            AddInputField();
+        }
     }));
     window["FLS"] = true;
     isWebp();
