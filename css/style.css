@@ -150,6 +150,503 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+.qs-datepicker-container {
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.qs-datepicker-container:before,
+.qs-datepicker-container:after {
+  content: "";
+}
+
+.qs-datepicker-container:before {
+  top: 0;
+}
+
+.qs-datepicker-container:after {
+  bottom: 0;
+}
+
+.qs-datepicker-container * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.qs-datepicker-container.qs-centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.qs-datepicker .qs-hidden {
+  display: none;
+}
+
+.qs-datepicker .qs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.qs-datepicker .qs-overlay.qs-hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-year {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.875em;
+  padding: 0.25em 0;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-year::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.qs-datepicker .qs-overlay .qs-close {
+  padding: 0.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.qs-datepicker .qs-overlay .qs-submit {
+  border: 1px solid #fff;
+  border-radius: 0.26392em;
+  padding: 0.5em;
+  margin: 0 auto auto;
+  cursor: pointer;
+  background: rgb(83, 168, 109);
+}
+
+.qs-datepicker .qs-overlay .qs-submit.qs-disabled {
+  color: grey;
+  border-color: grey;
+  cursor: not-allowed;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 33.33333%;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.15s;
+  -o-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month.active,
+.qs-datepicker .qs-overlay .qs-overlay-month:hover {
+  opacity: 1;
+}
+
+.qs-datepicker .qs-controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: rgb(0, 0, 0);
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+  margin-bottom: 8px;
+}
+
+.qs-datepicker .qs-controls.qs-blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.qs-datepicker .qs-arrow {
+  height: 1.5625em;
+  width: 1.5625em;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.26392em;
+  -webkit-transition: background 0.15s;
+  -o-transition: background 0.15s;
+  transition: background 0.15s;
+}
+
+.qs-datepicker .qs-arrow:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.qs-datepicker .qs-arrow:hover.qs-left:after {
+  border-right-color: #000;
+}
+
+.qs-datepicker .qs-arrow:hover.qs-right:after {
+  border-left-color: #000;
+}
+
+.qs-datepicker .qs-arrow:after {
+  content: "";
+  border: 0.39062em solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 50%;
+  -webkit-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+}
+
+.qs-datepicker .qs-arrow.qs-left:after {
+  border-right-color: grey;
+  right: 50%;
+  -webkit-transform: translate(25%, -50%);
+  -ms-transform: translate(25%, -50%);
+  transform: translate(25%, -50%);
+}
+
+.qs-datepicker .qs-arrow.qs-right:after {
+  border-left-color: grey;
+  left: 50%;
+  -webkit-transform: translate(-25%, -50%);
+  -ms-transform: translate(-25%, -50%);
+  transform: translate(-25%, -50%);
+}
+
+.qs-datepicker .qs-month-year {
+  font-weight: 700;
+  -webkit-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.qs-datepicker .qs-month-year:hover {
+  border-bottom: 1px solid grey;
+}
+
+.qs-datepicker .qs-month-year:active:focus,
+.qs-datepicker .qs-month-year:focus {
+  outline: none;
+}
+
+.qs-datepicker .qs-month {
+  padding-right: 0.5ex;
+}
+
+.qs-datepicker .qs-year {
+  padding-left: 0.5ex;
+}
+
+.qs-datepicker .qs-squares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  color: rgb(0, 0, 0);
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.qs-datepicker .qs-squares.qs-blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.qs-datepicker .qs-square {
+  font-size: 11px;
+  line-height: 13px;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qs-datepicker .qs-square.qs-current {
+  font-weight: 700;
+}
+
+.qs-datepicker .qs-square.qs-current span {
+  text-decoration: underline;
+}
+
+.qs-datepicker .qs-square.qs-active {
+  background: #17A1FA;
+  color: #fff !important;
+}
+
+.qs-datepicker .qs-square.qs-range-date-start:not(.qs-range-date-6) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.qs-datepicker .qs-square.qs-range-date-middle {
+  background: #d4ebf2;
+}
+
+.qs-datepicker .qs-square.qs-range-date-middle:not(.qs-range-date-0):not(.qs-range-date-6) {
+  border-radius: 0;
+}
+
+.qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-0 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.qs-datepicker .qs-square.qs-range-date-end:not(.qs-range-date-0),
+.qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-6 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.qs-datepicker .qs-square.qs-disabled span {
+  opacity: 0.2;
+}
+
+.qs-datepicker .qs-square.qs-empty {
+  cursor: default;
+}
+
+.qs-datepicker .qs-square.qs-disabled {
+  cursor: not-allowed;
+}
+
+.qs-datepicker .qs-square.qs-day {
+  cursor: default;
+  font-weight: 700;
+  color: grey;
+}
+
+.qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background: #17A1FA;
+  color: #fff !important;
+}
+
+.qs-datepicker .qs-event {
+  position: relative;
+}
+
+.qs-datepicker .qs-event:after {
+  content: "";
+  position: absolute;
+  width: 0.46875em;
+  height: 0.46875em;
+  border-radius: 50%;
+  background: #07f;
+  bottom: 0;
+  right: 0;
+}
+
+.qs-datepicker .qs-event.qs-disabled:after,
+.qs-datepicker .qs-event.qs-empty:after {
+  background: #cce4ff;
+}
+
+.qs-year {
+  display: none;
+}
+
+.qs-month {
+  font-size: 11px;
+  line-height: 13px;
+  color: #333333;
+}
+
+.qs-day {
+  padding-right: 0 !important;
+  font-size: 11px;
+  line-height: 13px;
+  color: #333333 !important;
+  margin-bottom: 12px;
+}
+
+.qs-outside-current-month {
+  color: #B3B3B3 !important;
+}
+
+.qs-squares div:nth-of-type(13) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(14) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(20) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(21) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(27) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(28) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(34) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(35) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(41) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(42) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(48) {
+  color: #17A1FA !important;
+}
+
+.qs-squares div:nth-of-type(49) {
+  color: #17A1FA !important;
+}
+
+.qs-overlay input {
+  font-size: 14px !important;
+  color: #000 !important;
+}
+
+.ticket__datapicket {
+  position: relative;
+}
+
+.ticket__datapicket .ticket__datapicket_one {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.ticket__datapicket .ticket__datapicket_two {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.ticket__datapicket .ticket__datapicket_three {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.ticket__datapicket-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.ticket__datapickets {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -1980,7 +2477,6 @@ h6 {
   font-size: 32px;
   line-height: 38px;
   color: #0075FF;
-  margin-bottom: 16px;
 }
 
 @supports (font-size: clamp( 1.5rem , 0.9285714286rem  +  1.1904761905vw , 2rem )) {
@@ -2136,9 +2632,6 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .ticket-person__title-location {
@@ -2147,7 +2640,8 @@ h6 {
   line-height: 120%;
   /* or 19px */
   color: #333333;
-  margin-right: 50px;
+  min-width: 120px;
+  margin-bottom: 32px;
 }
 
 .ticket-person__location {
@@ -2822,6 +3316,734 @@ h6 {
           animation: shrink-bounce 200ms cubic-bezier(0.4, 0, 0.23, 1);
   background: yellow url("../img/heart-border.svg") center center no-repeat !important;
   background-size: 24px 24px !important;
+}
+
+.best-store {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: #BC88FF;
+  border-radius: 25px;
+}
+
+.best-store-text {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center !important;
+}
+
+.card-best-store {
+  padding: 8px !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.title-card-best-store {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0075FF;
+}
+
+@supports (font-size: clamp( 1.25rem , 0.9642857143rem  +  0.5952380952vw , 1.5rem )) {
+  .title-card-best-store {
+    font-size: clamp( 1.25rem , 0.9642857143rem  +  0.5952380952vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , 0.9642857143rem  +  0.5952380952vw , 1.5rem )) {
+  .title-card-best-store {
+    font-size: calc(1.25rem + 0.25 * (100vw - 48rem) / 42);
+  }
+}
+
+@supports (line-height: clamp( 1.5625rem , 1.2767857143rem  +  0.5952380952vw , 1.8125rem )) {
+  .title-card-best-store {
+    line-height: clamp( 1.5625rem , 1.2767857143rem  +  0.5952380952vw , 1.8125rem );
+  }
+}
+
+@supports not (line-height: clamp( 1.5625rem , 1.2767857143rem  +  0.5952380952vw , 1.8125rem )) {
+  .title-card-best-store {
+    line-height: calc(1.5625rem + 0.25 * (100vw - 48rem) / 42);
+  }
+}
+
+.cards-store__price-tourism {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}
+
+.tourism__fied {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tourism__fied-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+  margin-right: 5px;
+}
+
+.tourism__fied-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+}
+
+.color-yellow {
+  color: #FFE041 !important;
+}
+
+.bunner-bg {
+  background: #000000;
+}
+
+.tourism-excursion__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.excursion {
+  min-width: 390px;
+}
+
+@supports (min-width: clamp( 18.75rem , 12.3214285714rem  +  13.3928571429vw , 24.375rem )) {
+  .excursion {
+    min-width: clamp( 18.75rem , 12.3214285714rem  +  13.3928571429vw , 24.375rem );
+  }
+}
+
+@supports not (min-width: clamp( 18.75rem , 12.3214285714rem  +  13.3928571429vw , 24.375rem )) {
+  .excursion {
+    min-width: calc(18.75rem + 5.625 * (100vw - 48rem) / 42);
+  }
+}
+
+.excursion__name {
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #6A6A6A;
+  margin-bottom: 20px;
+}
+
+@supports (font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem )) {
+  .excursion__name {
+    font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem )) {
+  .excursion__name {
+    font-size: calc(1.125rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem )) {
+  .excursion__name {
+    line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem );
+  }
+}
+
+@supports not (line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem )) {
+  .excursion__name {
+    line-height: calc(1.4375rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem )) {
+  .excursion__name {
+    margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem )) {
+  .excursion__name {
+    margin-bottom: calc(0.9375rem + 0.3125 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+.excursion__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+@supports (font-size: clamp( 1.625rem , 0.7973273942rem  +  1.3363028953vw , 2rem )) {
+  .excursion__title {
+    font-size: clamp( 1.625rem , 0.7973273942rem  +  1.3363028953vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.625rem , 0.7973273942rem  +  1.3363028953vw , 2rem )) {
+  .excursion__title {
+    font-size: calc(1.625rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (line-height: clamp( 2rem , 1.1723273942rem  +  1.3363028953vw , 2.375rem )) {
+  .excursion__title {
+    line-height: clamp( 2rem , 1.1723273942rem  +  1.3363028953vw , 2.375rem );
+  }
+}
+
+@supports not (line-height: clamp( 2rem , 1.1723273942rem  +  1.3363028953vw , 2.375rem )) {
+  .excursion__title {
+    line-height: calc(2rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem )) {
+  .excursion__title {
+    margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , 0.2477728285rem  +  1.1135857461vw , 1.25rem )) {
+  .excursion__title {
+    margin-bottom: calc(0.9375rem + 0.3125 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+.excursion__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 64px;
+}
+
+@supports (margin-bottom: clamp( 1.5rem , -4.0178173719rem  +  8.9086859688vw , 4rem )) {
+  .excursion__rating {
+    margin-bottom: clamp( 1.5rem , -4.0178173719rem  +  8.9086859688vw , 4rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 1.5rem , -4.0178173719rem  +  8.9086859688vw , 4rem )) {
+  .excursion__rating {
+    margin-bottom: calc(1.5rem + 2.5 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+.excursion__items {
+  position: relative;
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+}
+
+.excursion__items :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.excursion__items::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 1px;
+  background: #7E7E7E;
+}
+
+.excursion__item {
+  font-size: 24px;
+  line-height: 29px;
+  color: #6A6A6A;
+}
+
+@supports (font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem )) {
+  .excursion__item {
+    font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.2973273942rem  +  1.3363028953vw , 1.5rem )) {
+  .excursion__item {
+    font-size: calc(1.125rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem )) {
+  .excursion__item {
+    line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem );
+  }
+}
+
+@supports not (line-height: clamp( 1.4375rem , 0.6098273942rem  +  1.3363028953vw , 1.8125rem )) {
+  .excursion__item {
+    line-height: calc(1.4375rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+.excursion__block-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+.excursion__price {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+  margin-right: 31px;
+}
+
+.excursion__price-text {
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #333333;
+}
+
+.excursion__button {
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: #FFE041;
+  border-radius: 20px;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px 45px;
+}
+
+@supports (font-size: clamp( 1rem , 0.4285714286rem  +  1.1904761905vw , 1.5rem )) {
+  .excursion__button {
+    font-size: clamp( 1rem , 0.4285714286rem  +  1.1904761905vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1rem , 0.4285714286rem  +  1.1904761905vw , 1.5rem )) {
+  .excursion__button {
+    font-size: calc(1rem + 0.5 * (100vw - 48rem) / 42);
+  }
+}
+
+@supports (line-height: clamp( 1.3125rem , 0.7410714286rem  +  1.1904761905vw , 1.8125rem )) {
+  .excursion__button {
+    line-height: clamp( 1.3125rem , 0.7410714286rem  +  1.1904761905vw , 1.8125rem );
+  }
+}
+
+@supports not (line-height: clamp( 1.3125rem , 0.7410714286rem  +  1.1904761905vw , 1.8125rem )) {
+  .excursion__button {
+    line-height: calc(1.3125rem + 0.5 * (100vw - 48rem) / 42);
+  }
+}
+
+.excursion__button:hover {
+  background: rgb(139, 206, 139);
+}
+
+.excursion__rating .rating {
+  margin-left: 0 !important;
+  margin-right: 40px;
+}
+
+.excursion__rating .rating-text {
+  font-size: 16px;
+  line-height: 19px;
+  color: #0075FF;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.5991091314rem  +  0.4454342984vw , 1rem )) {
+  .excursion__rating .rating-text {
+    font-size: clamp( 0.875rem , 0.5991091314rem  +  0.4454342984vw , 1rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.5991091314rem  +  0.4454342984vw , 1rem )) {
+  .excursion__rating .rating-text {
+    font-size: calc(0.875rem + 0.125 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+@supports (line-height: clamp( 0.8125rem , -0.0151726058rem  +  1.3363028953vw , 1.1875rem )) {
+  .excursion__rating .rating-text {
+    line-height: clamp( 0.8125rem , -0.0151726058rem  +  1.3363028953vw , 1.1875rem );
+  }
+}
+
+@supports not (line-height: clamp( 0.8125rem , -0.0151726058rem  +  1.3363028953vw , 1.1875rem )) {
+  .excursion__rating .rating-text {
+    line-height: calc(0.8125rem + 0.375 * (100vw - 61.9375rem) / 28.0625);
+  }
+}
+
+.excursion__rating .rating__body::before {
+  content: "☆☆☆☆☆";
+  font-family: icons;
+  font-size: 32px;
+  color: #0075FF;
+  display: block;
+}
+
+@supports (font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem )) {
+  .excursion__rating .rating__body::before {
+    font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem )) {
+  .excursion__rating .rating__body::before {
+    font-size: calc(1.5rem + 0.875 * (100vw - 48rem) / 13.9375);
+  }
+}
+
+.excursion__rating .rating__active::before {
+  content: "★★★★★";
+  font-family: icons;
+  font-size: 32px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #0075FF;
+}
+
+@supports (font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem )) {
+  .excursion__rating .rating__active::before {
+    font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5rem , -1.5134529148rem  +  6.2780269058vw , 2.375rem )) {
+  .excursion__rating .rating__active::before {
+    font-size: calc(1.5rem + 0.875 * (100vw - 48rem) / 13.9375);
+  }
+}
+
+.excursion-description__block-picture {
+  width: 100%;
+  height: 390px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+  margin-bottom: 24px;
+}
+
+@supports (height: clamp( 15.625rem , -8.5288997214rem  +  38.9972144847vw , 24.375rem )) {
+  .excursion-description__block-picture {
+    height: clamp( 15.625rem , -8.5288997214rem  +  38.9972144847vw , 24.375rem );
+  }
+}
+
+@supports not (height: clamp( 15.625rem , -8.5288997214rem  +  38.9972144847vw , 24.375rem )) {
+  .excursion-description__block-picture {
+    height: calc(15.625rem + 8.75 * (100vw - 61.9375rem) / 22.4375);
+  }
+}
+
+.excursion-description__picture-ibg {
+  overflow: hidden;
+  width: 390px;
+  height: 100%;
+}
+
+.excursion-description__picture-1-ibg {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+}
+
+.excursion-description__picture-2-ibg {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+}
+
+.excursion-description__picture-3-ibg {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+.excursion-description__picture-4-ibg {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+.excursion-description__block-description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.excursion-description__block-text {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+}
+
+.excursion-description__text {
+  margin-bottom: 32px;
+}
+
+.excursion-description__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.excursion-description__paragraf {
+  font-size: 16px;
+  line-height: 120%;
+  color: #333333;
+}
+
+.excursion-description__person-info {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+}
+
+.excursion-description__person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.excursion-description__person-photo {
+  width: 152px;
+  height: 152px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+@supports (width: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem )) {
+  .excursion-description__person-photo {
+    width: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem );
+  }
+}
+
+@supports not (width: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem )) {
+  .excursion-description__person-photo {
+    width: calc(4.375rem + 5.125 * (100vw - 61.9375rem) / 22.4375);
+  }
+}
+
+@supports (height: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem )) {
+  .excursion-description__person-photo {
+    height: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem );
+  }
+}
+
+@supports not (height: clamp( 4.375rem , -9.7722841226rem  +  22.8412256267vw , 9.5rem )) {
+  .excursion-description__person-photo {
+    height: calc(4.375rem + 5.125 * (100vw - 61.9375rem) / 22.4375);
+  }
+}
+
+.excursion-description__person-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.excursion-description__person-status {
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+  color: #333333;
+}
+
+.ticket__swiper-block-title {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+
+.ticket__swiper-data {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  margin-top: 5px;
+}
+
+.ticket__block-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.ticket__price-text {
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  margin-left: 24px;
+}
+
+.ticket-person__block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ticket-person__location ul li {
+  margin-top: 8px;
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
+.ticket-person__location ul {
+  display: block;
+}
+
+.ticket-person__reviews-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.ticket-person__reviews {
+  margin-bottom: 20px;
+}
+
+.ticket-person__review-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.ticket-person__review-rating {
+  margin-bottom: 8px;
+}
+
+.ticket-person__review-text {
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+  color: #333333;
+}
+
+.mini-slider-room {
+  margin-bottom: 155px !important;
+}
+
+.button-ticket-datapicket {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 40px;
+  display: block;
+  max-width: 254px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background: #FFE041;
+  border-radius: 20px;
+  padding: 11px !important;
+}
+
+.button-ticket-datapicket:hover {
+  background: rgb(139, 206, 139);
+}
+
+.excursion-description__block-text {
+  margin-bottom: 100px;
 }
 
 .header__top {
@@ -3966,6 +5188,13 @@ input[type=checkbox]:checked + label > ins {
 }
 
 @media (max-width: 61.99875em) {
+  .ticket__datapickets {
+    gap: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .billboard__buttons {
     margin-top: 45px;
   }
@@ -3990,16 +5219,6 @@ input[type=checkbox]:checked + label > ins {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 50px;
-  }
-
-  .ticket__swiper-block-title {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
   }
 
   .ticket__swiper-title {
@@ -4042,14 +5261,36 @@ input[type=checkbox]:checked + label > ins {
     gap: 8px;
   }
 
-  .ticket-person__block-location {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .tourism__search .input {
     background-size: 25px 25px;
+  }
+
+  .excursion-description__block-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .excursion-description__person-info {
+    margin-bottom: 20px;
+  }
+
+  .ticket__swiper-block-title {
+    gap: 0;
+  }
+
+  .ticket__block-price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .mini-slider-room {
+    margin-bottom: 50px !important;
   }
 
   .item-entry {
@@ -4289,6 +5530,16 @@ input[type=checkbox]:checked + label > ins {
     background-size: 20px 21px;
   }
 
+  .ticket__swiper-block-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
   .new-ticket__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4329,6 +5580,33 @@ input[type=checkbox]:checked + label > ins {
 
   .title-card-tourism {
     font-size: 20px;
+  }
+
+  .tourism-excursion__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .excursion {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .excursion__block-price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .excursion__button {
+    margin: 0 auto;
+  }
+
+  .button-ticket-datapicket {
+    margin: 0 auto;
+    margin-top: 40px;
   }
 
   .container-top {
@@ -4546,6 +5824,55 @@ input[type=checkbox]:checked + label > ins {
 
   .tourism__search .input {
     width: 100%;
+  }
+
+  .excursion-description__block-picture {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .excursion-description__picture-1-ibg {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-row-span: 0;
+    grid-row-end: 1;
+  }
+
+  .excursion-description__picture-2-ibg {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-span: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-row-span: 0;
+    grid-row-end: 1;
+  }
+
+  .excursion-description__picture-3-ibg {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 0;
+    grid-row-end: 2;
+  }
+
+  .excursion-description__picture-4-ibg {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-span: 0;
+    grid-column-end: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 0;
+    grid-row-end: 2;
   }
 
   .popap {

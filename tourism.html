@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220827183056">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220830152434">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,7 +100,7 @@
 
 				</div>
 			</div>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220827183056"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220830152434"></script>
 		</header>
 		<header class="header">
 			<div class="header__body body-pages-bg">
@@ -220,60 +220,62 @@
 					</div>
 					<div class="tourism__search">
 						<input autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск по объявлениям магазина" class="input">
-						<button class="button-search-shop">Найти</button>
+						<a href="tourism-search.html" class="button-search-shop">Найти</a>
 					</div>
-					<div class="store">
-						<div class="store__text text-store">
-							<div class="text-store__title">Магазины</div>
-							<a class="text-store__button" href="#">Все магазины</a>
-						</div>
-						<div class="store__cards cards-store cards-store-tourism">
-							<a href="#" class="cards-store__card card-tourism">
-								<div class="check-card card-check-tourism">
-									<input id='check-tourism-1' type='checkbox' />
-									<label for='check-tourism-1'>
-										<span></span>
-									</label>
-								</div>
-								<div class="cards-store__card-title title-card-tourism">Владивосток</div>
-							</a>
-							<a href="#" class="cards-store__card card-tourism">
-								<div class="check-card card-check-tourism">
-									<input id='check-tourism-2' type='checkbox' />
-									<label for='check-tourism-2'>
-										<span></span>
-									</label>
-								</div>
-								<div class="cards-store__card-title title-card-tourism">Владивосток</div>
-							</a>
-							<a href="#" class="cards-store__card card-tourism">
-								<div class="check-card card-check-tourism">
-									<input id='check-tourism-3' type='checkbox' />
-									<label for='check-tourism-3'>
-										<span></span>
-									</label>
-								</div>
-								<div class="cards-store__card-title title-card-tourism">Владивосток</div>
-							</a>
-							<a href="#" class="cards-store__card card-tourism">
-								<div class="check-card card-check-tourism">
-									<input id='check-tourism-4' type='checkbox' />
-									<label for='check-tourism-4'>
-										<span></span>
-									</label>
-								</div>
-								<div class="cards-store__card-title title-card-tourism">Владивосток</div>
-							</a>
-							<a href="#" class="cards-store__card card-tourism">
-								<div class="check-card card-check-tourism">
-									<input id='check-tourism-5' type='checkbox' />
-									<label for='check-tourism-5'>
-										<span></span>
-									</label>
-								</div>
-								<div class="cards-store__card-title title-card-tourism">Владивосток</div>
-							</a>
+					<div class="tourism__stores">
+						<div class="store">
+							<div class="store__text text-store">
+								<div class="text-store__title">Магазины</div>
+								<a class="text-store__button" href="#">Все магазины</a>
+							</div>
+							<div class="store__cards cards-store cards-store-tourism">
+								<a href="tourism-direction.html" class="cards-store__card card-tourism">
+									<div class="check-card card-check-tourism">
+										<input id='check-tourism-1' type='checkbox' />
+										<label for='check-tourism-1'>
+											<span></span>
+										</label>
+									</div>
+									<div class="cards-store__card-title title-card-tourism">Владивосток</div>
+								</a>
+								<a href="#" class="cards-store__card card-tourism">
+									<div class="check-card card-check-tourism">
+										<input id='check-tourism-2' type='checkbox' />
+										<label for='check-tourism-2'>
+											<span></span>
+										</label>
+									</div>
+									<div class="cards-store__card-title title-card-tourism">Владивосток</div>
+								</a>
+								<a href="#" class="cards-store__card card-tourism">
+									<div class="check-card card-check-tourism">
+										<input id='check-tourism-3' type='checkbox' />
+										<label for='check-tourism-3'>
+											<span></span>
+										</label>
+									</div>
+									<div class="cards-store__card-title title-card-tourism">Владивосток</div>
+								</a>
+								<a href="#" class="cards-store__card card-tourism">
+									<div class="check-card card-check-tourism">
+										<input id='check-tourism-4' type='checkbox' />
+										<label for='check-tourism-4'>
+											<span></span>
+										</label>
+									</div>
+									<div class="cards-store__card-title title-card-tourism">Владивосток</div>
+								</a>
+								<a href="#" class="cards-store__card card-tourism">
+									<div class="check-card card-check-tourism">
+										<input id='check-tourism-5' type='checkbox' />
+										<label for='check-tourism-5'>
+											<span></span>
+										</label>
+									</div>
+									<div class="cards-store__card-title title-card-tourism">Владивосток</div>
+								</a>
 
+							</div>
 						</div>
 						<div class="store">
 							<div class="store__text text-store">
@@ -281,7 +283,7 @@
 								<a class="text-store__button" href="#">Все экскурсии</a>
 							</div>
 							<div class="store__cards cards-store">
-								<a href="#" class="cards-store__card-block">
+								<a href="tourism-excursion.html" class="cards-store__card-block">
 									<div class="cards-store__card">
 										<div class="check-card">
 											<input id='check-card-1' type='checkbox' />
@@ -630,6 +632,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -731,7 +734,7 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220827183056"></script>
+	<script src="js/app.min.js?_v=20220830152434"></script>
 </body>
 
 </html>
