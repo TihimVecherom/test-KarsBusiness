@@ -6,8 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220902122721">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220902190410">
+
 	<link rel="shortcut icon" href="favicon.ico">
+
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,7 +113,7 @@
 			</div>
 
 
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220902122721"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220902190410"></script>
 
 		</header>
 		<header class="header">
@@ -265,20 +267,37 @@
 							</div>
 						</div>
 						<div class="tourism-excursion__description excursion-description">
+
+
+
+
 							<div class="excursion-description__block-picture">
 
+
 								<div class="excursion-description__picture-1-ibg">
-									<img src="img/tourism-excursion/1.png" alt="">
+									<a data-fslightbox="gal" href="img/tourism-excursion/lg-1.png">
+										<img src="img/tourism-excursion/1.png" alt="">
+									</a>
+
 								</div>
 								<div class="excursion-description__picture-2-ibg">
-									<img src="img/tourism-excursion/2.png" alt="">
+									<a data-fslightbox="gal" href="img/tourism-excursion/lg-2.png">
+										<img src="img/tourism-excursion/2.png" alt="">
+									</a>
+
 								</div>
 
 								<div class="excursion-description__picture-3-ibg ">
-									<img src="img/tourism-excursion/3.png" alt="">
+									<a data-fslightbox="gal" href="img/tourism-excursion/lg-3.png">
+										<img src="img/tourism-excursion/3.png" alt="">
+									</a>
+
 								</div>
 								<div class="excursion-description__picture-4-ibg ">
-									<img src="img/tourism-excursion/4.png" alt="">
+									<a data-fslightbox="gal" href="img/tourism-excursion/lg-4.png">
+										<img src="img/tourism-excursion/4.png" alt="">
+									</a>
+
 								</div>
 
 							</div>
@@ -333,7 +352,22 @@
 												<input autocomplete="off" type="data" name="form[]" class="input ticket__datapicket_three">
 											</div>
 										</div>
-										<div class="ticket__datapicket-buttons"><a class="button-ticket-datapicket" href="#">Забронировать</a></div>
+										<div class="ticket__button-quantity">
+											<div class="number block-quantity">
+												<div class="quantity-input-title">Количество человек</div>
+
+												<div class="quantity">
+													<button class="quantity-minus " type="button" onclick="this.nextElementSibling.stepDown();">-</button>
+
+													<input class="quantity-input" type="number" min="0" value="0" readonly>
+
+
+													<button class="quantity-plus" type="button" onclick="this.previousElementSibling.stepUp();">+</button>
+												</div>
+
+											</div>
+											<div class="ticket__datapicket-buttons"><a class="button-ticket-datapicket" href="#">Забронировать</a></div>
+										</div>
 									</div>
 								</div>
 								<div data-da=".excursion-description__person-info-data-da, 991" class="excursion-description__person-info">
@@ -456,7 +490,7 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220902122721"></script>
+	<script src="js/app.min.js?_v=20220902190410"></script>
 </body>
 
 </html>
