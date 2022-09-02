@@ -771,6 +771,9 @@ h6 {
   gap: 24px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .billboard__picture-ibg img {
@@ -997,9 +1000,11 @@ h6 {
 }
 
 .cards-store__card {
+  position: relative;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  padding: 8px 8px 24px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,7 +1015,6 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 8px 8px 24px 8px;
   height: 240px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 23%;
@@ -1020,6 +1024,8 @@ h6 {
   border-radius: 20px;
   -webkit-box-shadow: 0 0 0px rgb(255, 255, 255);
           box-shadow: 0 0 0px rgb(255, 255, 255);
+  min-width: 250px;
+  max-width: 32%;
 }
 
 @supports (height: clamp( 15rem , 15rem  +  0vw , 15rem )) {
@@ -1032,6 +1038,14 @@ h6 {
   .cards-store__card {
     height: calc(15rem + 0 * (100vw - 22.5rem) / 97.5);
   }
+}
+
+.cards-store__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .cards-store__card-title {
@@ -1053,10 +1067,31 @@ h6 {
       -ms-flex: 1 1 23%;
           flex: 1 1 23%;
   position: relative;
+  min-width: 250px;
+  max-width: 32%;
+}
+
+.cards-store__card-block .cards-store__card {
+  max-width: 100%;
+}
+
+.cards-store__card-block a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-tourism a {
+  z-index: 2;
+}
+
+.cards-store__block-info {
+  padding: 0px 10px 10px 10px;
 }
 
 .check-card {
   position: absolute;
+  z-index: 4;
   right: 8px;
   top: 8px;
 }
@@ -2307,6 +2342,7 @@ h6 {
 }
 
 .image-swiper {
+  position: relative;
   padding: 1px;
   border: 1px solid #6A6A6A;
   border-radius: 10px;
@@ -2654,27 +2690,12 @@ h6 {
 
 .block-add-photo input[type=file] {
   outline: 0;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
   height: 0;
+  width: 0;
 }
 
-.block-add-photo {
-  position: relative;
-  overflow: hidden;
-}
-
-.label-add-photo-ibg {
-  position: relative;
-  overflow: hidden;
-  width: 119px;
-  height: 68px;
-  border: 1px solid #6A6A6A;
-  border-radius: 5px;
-  display: block;
-}
-
-.label-add-photo-ibg::after {
+.block-add-photo input[type=file]::after {
   content: "";
   position: absolute;
   display: block;
@@ -2693,6 +2714,64 @@ h6 {
   background: url("../img/new-ticket/add.svg") center center no-repeat;
   background-size: contain;
   cursor: pointer;
+  z-index: 5;
+}
+
+.block-add-photo ._input-add-photo-active {
+  position: relative;
+}
+
+.block-add-photo ._input-add-photo-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: url("../img/new-ticket/add.svg") center center no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+}
+
+.label-add-photo-ibg img {
+  z-index: 9 !important;
+}
+
+.delet-photo {
+  z-index: 10 !important;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.block-add-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.label-add-photo-ibg {
+  position: relative;
+  overflow: hidden;
+  width: 119px;
+  height: 68px;
+  border: 1px solid #6A6A6A;
+  border-radius: 5px;
+  display: block;
 }
 
 .block-add-photo {
@@ -2702,9 +2781,6 @@ h6 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px 16px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 ._label-add-photo-ibg-active::after {
@@ -3342,6 +3418,7 @@ h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  max-width: 100% !important;
 }
 
 .title-card-best-store {
@@ -3374,6 +3451,10 @@ h6 {
   .title-card-best-store {
     line-height: calc(1.5625rem + 0.25 * (100vw - 48rem) / 42);
   }
+}
+
+.slide-best {
+  padding: 5px 0 5px 0;
 }
 
 .cards-store__price-tourism {
@@ -3797,6 +3878,7 @@ h6 {
       grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
+  cursor: pointer;
 }
 
 .excursion-description__picture-2-ibg {
@@ -3812,6 +3894,7 @@ h6 {
       grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
+  cursor: pointer;
 }
 
 .excursion-description__picture-3-ibg {
@@ -3827,6 +3910,7 @@ h6 {
       grid-row-start: 1;
   -ms-grid-row-span: 1;
   grid-row-end: 2;
+  cursor: pointer;
 }
 
 .excursion-description__picture-4-ibg {
@@ -3842,6 +3926,7 @@ h6 {
       grid-row-start: 2;
   -ms-grid-row-span: 1;
   grid-row-end: 3;
+  cursor: pointer;
 }
 
 .excursion-description__block-description {
@@ -4046,6 +4131,80 @@ h6 {
   margin-bottom: 100px;
 }
 
+.billboard__buttons-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block-select-search .select {
+  width: 250px;
+}
+
+.block-select-search .select__title {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  border: 1px solid #F5F5F5 !important;
+}
+
+.block-select-search .select__title:hover {
+  background: white;
+}
+
+.block-select-search .select .select__body .select__title .select__value {
+  padding: 0 !important;
+}
+
+.block-select-search .select .select__body .select__title .select__value::after {
+  content: "";
+  display: none;
+}
+
+.block-select-search .select .select__body .select__title .select__value input {
+  text-align: center;
+  cursor: pointer;
+}
+
+.block-select-search .select .select__body .select__title .select__value input::-webkit-input-placeholder {
+  color: #000000 !important;
+}
+
+.block-select-search .select .select__body .select__title .select__value input::-moz-placeholder {
+  color: #000000 !important;
+}
+
+.block-select-search .select .select__body .select__title .select__value input:-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.block-select-search .select .select__body .select__title .select__value input::-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.block-select-search .select .select__body .select__title .select__value input::placeholder {
+  color: #000000 !important;
+}
+
+.select__input {
+  border-radius: 20px;
+}
+
+._select-open .select__options button:first-child {
+  color: red !important;
+  display: none !important;
+}
+
+.block-select-search ._select-open .select__body .select__title {
+  background: white;
+}
+
 .header__top {
   height: 60px;
   background: #2C2C2C;
@@ -4237,6 +4396,7 @@ h6 {
   background: transparent;
   min-height: 41px !important;
   min-width: 230px !important;
+  cursor: pointer;
 }
 
 .button-search-sort {
@@ -4543,10 +4703,6 @@ h6 {
   color: #6A6A6A;
 }
 
-.input-popap-password {
-  background: url("../img/popap/eye.slash.svg") 97% center no-repeat;
-}
-
 .input-label-block-popap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4764,6 +4920,18 @@ input[type=checkbox]:checked + label > ins {
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.637), 0 0px 0px rgba(0, 0, 0, 0.637);
           box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.637), 0 0px 0px rgba(0, 0, 0, 0.637);
   color: rgba(0, 0, 0, 0.8431372549);
+}
+
+.label-popap {
+  position: relative;
+}
+
+.button-password-ibg {
+  position: absolute;
+  right: 15px;
+  top: 1px;
+  width: 25px;
+  height: 17px;
 }
 
 .footer {
@@ -5199,6 +5367,20 @@ input[type=checkbox]:checked + label > ins {
     margin-top: 45px;
   }
 
+  .cards-store__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 31%;
+            flex: 1 1 31%;
+    min-width: 150px;
+  }
+
+  .cards-store__card-block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 31%;
+            flex: 1 1 31%;
+    min-width: 150px;
+  }
+
   .shop__search .input {
     background-size: 25px 25px;
   }
@@ -5263,6 +5445,13 @@ input[type=checkbox]:checked + label > ins {
 
   .tourism__search .input {
     background-size: 25px 25px;
+  }
+
+  .card-tourism {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 31% !important;
+            flex: 1 1 31% !important;
+    max-width: 32%;
   }
 
   .excursion-description__block-description {
@@ -5401,12 +5590,14 @@ input[type=checkbox]:checked + label > ins {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 48%;
             flex: 1 1 48%;
+    max-width: none;
   }
 
   .cards-store__card-block {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 48%;
             flex: 1 1 48%;
+    max-width: none;
   }
 
   .shop {
@@ -5575,7 +5766,7 @@ input[type=checkbox]:checked + label > ins {
   .card-tourism {
     height: 250px;
     padding: 10px;
-    min-width: 150px;
+    max-width: 49%;
   }
 
   .title-card-tourism {
@@ -5824,6 +6015,10 @@ input[type=checkbox]:checked + label > ins {
 
   .tourism__search .input {
     width: 100%;
+  }
+
+  .card-tourism {
+    max-width: 48%;
   }
 
   .excursion-description__block-picture {

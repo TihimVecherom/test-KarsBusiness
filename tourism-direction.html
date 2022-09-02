@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220830210741">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220902122721">
 	<link rel="shortcut icon" href="favicon.ico">
+
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -55,7 +56,14 @@
 								<div class="popap-form">
 									<div class="popap-form__block">
 										<input placeholder="Телефон или электронная почта" type="text">
-										<input class="input-popap-password" placeholder="Пароль" type="password">
+										<div class="popap-password-block">
+											<label class="label-popap">
+												<input class="input-popap-password" placeholder="Пароль" type="password">
+												<button class="button-password-ibg">
+													<img src="img/popap/eye.slash.svg">
+												</button>
+											</label>
+										</div>
 									</div>
 									<div class="input-label-block-popap">
 										<div class="popap-checkbox-block">
@@ -100,7 +108,10 @@
 
 				</div>
 			</div>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220830210741"></script>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220902122721"></script>
+
 		</header>
 		<header class="header">
 			<div class="header__body body-pages-bg">
@@ -223,39 +234,73 @@
 						<div class="store best-store">
 							<div class="store__text text-store best-store-text">
 								<div class="text-store__title">Лучшие предложения на этой неделе в городе Владивосток</div>
-
 							</div>
-							<div class="store__cards cards-store ">
-								<a href="room.html" class="cards-store__card card-best-store">
+							<div class="best-store__swiper">
+								<div class="swiper swiper-best-sore">
 
-									<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”</div>
-									<div class="cards-store__price-tourism">от
-										15 000 ₽
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide slide-best">
+											<div class="cards-store__card card-best-store">
+												<a class="cards-store__link" href="#"></a>
+												<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”
+												</div>
+												<div class="cards-store__price-tourism">от
+													15 000 ₽
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-best">
+											<div class="cards-store__card card-best-store">
+												<a class="cards-store__link" href="#"></a>
+												<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”
+												</div>
+												<div class="cards-store__price-tourism">от
+													15 000 ₽
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-best">
+											<div class="cards-store__card card-best-store">
+												<a class="cards-store__link" href="#"></a>
+												<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”
+												</div>
+												<div class="cards-store__price-tourism">от
+													15 000 ₽
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-best">
+											<div class="cards-store__card card-best-store">
+												<a class="cards-store__link" href="#"></a>
+												<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”
+												</div>
+												<div class="cards-store__price-tourism">от
+													15 000 ₽
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-best">
+											<div class="cards-store__card card-best-store">
+												<a class="cards-store__link" href="#"></a>
+												<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”
+												</div>
+												<div class="cards-store__price-tourism">от
+													15 000 ₽
+												</div>
+											</div>
+										</div>
+
 									</div>
-								</a>
-								<a href="#" class="cards-store__card card-best-store">
-
-									<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”</div>
-									<div class="cards-store__price-tourism">от
-										15 000 ₽
-									</div>
-								</a>
-								<a href="#" class="cards-store__card card-best-store">
-
-									<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”</div>
-									<div class="cards-store__price-tourism">от
-										15 000 ₽
-									</div>
-								</a>
-								<a href="#" class="cards-store__card card-best-store">
-
-									<div class="cards-store__card-title title-card-best-store">Хостел “Три поросенка”</div>
-									<div class="cards-store__price-tourism">от
-										15 000 ₽
-									</div>
-								</a>
 
 
+								</div>
+								<div class="store__cards cards-store ">
+
+
+
+
+								</div>
 							</div>
 						</div>
 						<div class="store">
@@ -264,8 +309,8 @@
 
 							</div>
 							<div class="store__cards cards-store">
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-1' type='checkbox' />
 											<label for='check-card-1'>
@@ -284,9 +329,9 @@
 									<div class="cards-store__data">
 										размещение от 1-х суток
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-2' type='checkbox' />
 											<label for='check-card-2'>
@@ -305,9 +350,9 @@
 									<div class="cards-store__data">
 										размещение от 2-х суток
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-3' type='checkbox' />
 											<label for='check-card-3'>
@@ -326,9 +371,9 @@
 									<div class="cards-store__data">
 										размещение от 2-х суток
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-4' type='checkbox' />
 											<label for='check-card-4'>
@@ -347,7 +392,7 @@
 									<div class="cards-store__data">
 										размещение от 4-х часов
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 						<div class="store">
@@ -357,8 +402,8 @@
 							</div>
 							<div class="store__cards cards-store">
 
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-1' type='checkbox' />
 											<label for='check-card-1'>
@@ -377,9 +422,9 @@
 									<div class="cards-store__data">
 										4 часа
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-2' type='checkbox' />
 											<label for='check-card-2'>
@@ -398,9 +443,9 @@
 									<div class="cards-store__data">
 										5 часа
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-3' type='checkbox' />
 											<label for='check-card-3'>
@@ -419,9 +464,9 @@
 									<div class="cards-store__data">
 										5 часа
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-4' type='checkbox' />
 											<label for='check-card-4'>
@@ -440,7 +485,7 @@
 									<div class="cards-store__data">
 										5 часа
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 						<div class="store">
@@ -450,8 +495,8 @@
 							</div>
 							<div class="store__cards cards-store">
 
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-21' type='checkbox' />
 											<label for='check-card-21'>
@@ -470,9 +515,9 @@
 									<div class="cards-store__data">
 										средний чек
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-22' type='checkbox' />
 											<label for='check-card-22'>
@@ -491,9 +536,9 @@
 									<div class="cards-store__data">
 										средний чек
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-23' type='checkbox' />
 											<label for='check-card-23'>
@@ -512,9 +557,9 @@
 									<div class="cards-store__data">
 										средний чек
 									</div>
-								</a>
-								<a href="#" class="cards-store__card-block">
-									<div class="cards-store__card">
+								</div>
+								<div class="cards-store__card-block">
+									<div class="cards-store__card"><a class="cards-store__link" href="#"></a>
 										<div class="check-card">
 											<input id='check-card-24' type='checkbox' />
 											<label for='check-card-24'>
@@ -533,7 +578,7 @@
 									<div class="cards-store__data">
 										средний чек
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -640,7 +685,7 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220830210741"></script>
+	<script src="js/app.min.js?_v=20220902122721"></script>
 </body>
 
 </html>

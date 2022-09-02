@@ -4478,6 +4478,32 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".swiper")) new core(".swiper-best-sore", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                spaceBetween: 16,
+                autoHeight: true,
+                speed: 800,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    430: {
+                        slidesPerView: 2
+                    },
+                    768: {
+                        slidesPerView: 3
+                    },
+                    992: {
+                        slidesPerView: 3
+                    },
+                    1078: {
+                        slidesPerView: 4
+                    }
+                },
+                on: {}
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();
@@ -4593,6 +4619,12 @@
             menuBurger.classList.toggle("_icon-menu-active");
             if (menuBody) menuBody.classList.toggle("_menu-active");
         }));
+        const elNodes = document.querySelectorAll(".input-add-photo");
+        elNodes.forEach((el => {
+            el.addEventListener("click", (() => {
+                el.classList.toggle("_input-add-photo-active");
+            }));
+        }));
         function makeid() {
             var text = "";
             var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -4603,7 +4635,7 @@
             var inputs_c = $(".block-add-photo > label").length;
             var new_id = makeid();
             if (inputs_c < 5) {
-                var new_input = '<label class="label-add-photo-ibg 12" for="imageFileNew_' + new_id + '"><input class="input-add-photo imageFile" id="imageFileNew_' + new_id + '" type="file" accept="image/*" /><img class="prevImage" src="#" alt=""' + new_id + '  style="display:none" /><button class="delet-photo"></button></label>';
+                var new_input = '<label class="label-add-photo-ibg 12" for="imageFileNew_' + new_id + '"><input class="input-add-photo  imageFile" id="imageFileNew_' + new_id + '" type="file" accept="image/*" /><img class="prevImage" src="#" alt=""' + new_id + '  style="display:none" /><button class="delet-photo"></button></label>';
                 $(".block-add-photo").append(new_input);
             }
         }
@@ -4626,11 +4658,16 @@
             console.log(inputs_c);
             var parent = $(this).closest("label");
             $(parent).find("input");
-            if (inputs_c > 1) $(parent).remove(); else {
+            if (inputs_c > 0) $(parent).remove(); else {
                 $(parent).remove();
                 AddInputField();
             }
         }));
+        let passBtn = document.querySelector(".button-password-ibg");
+        let passInput = document.querySelector(".input-popap-password");
+        passBtn.onclick = function() {
+            if ("password" === passInput.getAttribute("type")) passInput.setAttribute("type", "text"); else passInput.setAttribute("type", "password");
+        };
         window["FLS"] = true;
         isWebp();
         spollers();
