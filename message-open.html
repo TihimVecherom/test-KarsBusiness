@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Кабинет</title>
+	<title>Открытое сообщение</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -330,7 +330,7 @@
 										</li>
 										<li class="person__item "><a href="my-orders.html" class="person__link">Мои заказы</a>
 										</li>
-										<li class="person__item "><a href="message-my-info.html" class="person__link">Сообщения</a>
+										<li class="person__item "><a href="#" class="person__link">Сообщения</a>
 										</li>
 										<li class="person__item item-person-favorites"><a href="favorites.html" class="person__link">Избранное</a>
 										</li>
@@ -351,93 +351,76 @@
 							<div class="bunner-text">Рекламный баннер</div>
 						</div>
 						<div class="cabinet__item-content">
-							<div class="cabinet__item-content-title">Кошелек</div>
-							<div class="cabinet__item-block">
-								<div class="cabinet__item-tabs">
-									<div data-tabs class="tabs">
-										<nav data-tabs-titles class="tabs__navigation">
-											<button type="submit" class="tabs__title _tab-active">В продаже</button>
-											<button type="submit" class="tabs__title">Пополнить баланс</button>
-
-										</nav>
-										<div data-tabs-body class="tabs__content">
-											<div class="tabs__body">
-												<div class="tabs__title-insade">Выберите способ оплаты</div>
-												<div data-tabs class="tabs">
-													<nav data-tabs-titles class="tabs__navigation tabs-navigation-choise">
-														<button type="submit" class="tabs__title tabs-title-choise _tab-active"></button>
-														<button type="submit" class="tabs__title tabs-title-choise"></button>
-
-													</nav>
-													<div data-tabs-body class="tabs__content">
-														<div class="tabs__body">
-															<div class="choice-replenishment">
-																<div class="choice-replenishment__title">Сумма пополнения</div>
-																<div class="choice-replenishment__content">
-																	<div class="choice-replenishment__items">
-
-
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment' type='radio' />
-																			<label for='replenishment'>
-																				<span class="span-price">100 ₽</span>
-																				<span class="span-bonus">+50₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-1' type='radio' />
-																			<label for='replenishment-1'>
-																				<span class="span-price">300 ₽</span>
-																				<span class="span-bonus">+150₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-2' type='radio' />
-																			<label for='replenishment-2'>
-																				<span class="span-price">500 ₽</span>
-																				<span class="span-bonus">+250₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-3' type='radio' />
-																			<label for='replenishment-3'>
-																				<span class="span-price">1000 ₽</span>
-																				<span class="span-bonus">+500₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input">
-																			<input class="replenishment-input" type="text" placeholder="Ввести сумму">
-																		</div>
-																	</div>
-																	<a class="button-save" href="message.html">Перейти к оплате</a>
-																</div>
-															</div>
-														</div>
-														<div class="tabs__body">
-															2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio
-															exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a
-															minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error
-															molestias!
-														</div>
-
-													</div>
-												</div>
-
+							<div class="cabinet__item-content-title">Сообщения</div>
+							<div class="cabinet__item-block ">
+								<div class="message-open">
+									<div class="message-open__content">
+										<div class="message-open__block-title">
+											<a class="message-open__back-link" href="message.html"></a>
+											<div class="message-open__title">Мария Иванова</div>
+										</div>
+										<div class="message-open__block-message">
+											<div class="message-incoming">
+												<div class="message__person-id">M</div>
+												<div class="message-incoming__text">Здравствуйте! Как ваши дела?Lorem ipsum dolor
+													sit amet, consectetur adipisicing elit. Neque, dolores. Aperiam, ipsum? Incidunt
+													ab corrupti maiores, dolor aut inventore, odit id assumenda omnis porro quis
+													expedita. Sequi tenetur adipisci amet.</div>
+												<div class="message-incoming__time">15:28</div>
 											</div>
-											<div class="tabs__body">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum officia eius
-												sequi temporibus nostrum. Asperiores, atque? Quam est, unde, explicabo ipsum,
-												possimus quaerat incidunt officiis enim ducimus consequuntur rem.
+											<div class="message-my">
+												<div class="message-my__time">15:28</div>
+												<div class="message-my__text">Здравствуйте!A как ваши дела?</div>
+												<div class="message__my-id">Я</div>
 											</div>
-
+											<div class="message-incoming">
+												<div class="message__person-id">M</div>
+												<div class="message-incoming__text">Здравствуйте! Уже спрашивал как дела?</div>
+												<div class="message-incoming__time">15:28</div>
+											</div>
+											<div class="message-my">
+												<div class="message-my__time">15:28</div>
+												<div class="message-my__text">Здравствуйте! Мы здоровались?</div>
+												<div class="message__my-id">Я</div>
+											</div>
+											<div class="message-incoming">
+												<div class="message__person-id">M</div>
+												<div class="message-incoming__text">Дела хорошо!</div>
+												<div class="message-incoming__time">15:28</div>
+											</div>
+											<div class="message-my">
+												<div class="message-my__time">15:28</div>
+												<div class="message-my__text">Мы не быстро отвечаем друг дргу</div>
+												<div class="message__my-id">Я</div>
+											</div>
+											<div class="message-incoming">
+												<div class="message__person-id">M</div>
+												<div class="message-incoming__text">Здравствуйте! Как ваши дела?</div>
+												<div class="message-incoming__time">15:28</div>
+											</div>
+											<div class="message-my">
+												<div class="message-my__time">15:28</div>
+												<div class="message-my__text">Здравствуйте! Как ваши дела?</div>
+												<div class="message__my-id">Я</div>
+											</div>
 										</div>
 									</div>
+									<div class="message-open__block-send">
+										<label data-da=".block-button-mobile, 479.98" class="label-add-file" for="add-file">
+											<input class="input-add-file" id="add-file" type="file">
+										</label>
+										<label data-da=".block-button-mobile, 479.98" class="label-add-photo" for="add-photo">
+											<input class="input-add-photo" id="add-photo" type="file" name="image">
+										</label>
+										<div class="block-message-textarea">
+											<textarea autocomplete="off" type="text" placeholder="Написать сообщение " class="textarea-message"></textarea>
+											<button class="button-send"></button>
+										</div>
 
+										<div class="block-button-mobile"></div>
+									</div>
 								</div>
+
 							</div>
 						</div>
 					</div>

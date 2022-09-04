@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Кабинет</title>
+	<title>Сообщения моя информация</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -330,7 +330,7 @@
 										</li>
 										<li class="person__item "><a href="my-orders.html" class="person__link">Мои заказы</a>
 										</li>
-										<li class="person__item "><a href="message-my-info.html" class="person__link">Сообщения</a>
+										<li class="person__item "><a href="#" class="person__link">Сообщения</a>
 										</li>
 										<li class="person__item item-person-favorites"><a href="favorites.html" class="person__link">Избранное</a>
 										</li>
@@ -351,94 +351,91 @@
 							<div class="bunner-text">Рекламный баннер</div>
 						</div>
 						<div class="cabinet__item-content">
-							<div class="cabinet__item-content-title">Кошелек</div>
-							<div class="cabinet__item-block">
-								<div class="cabinet__item-tabs">
-									<div data-tabs class="tabs">
-										<nav data-tabs-titles class="tabs__navigation">
-											<button type="submit" class="tabs__title _tab-active">В продаже</button>
-											<button type="submit" class="tabs__title">Пополнить баланс</button>
-
-										</nav>
-										<div data-tabs-body class="tabs__content">
-											<div class="tabs__body">
-												<div class="tabs__title-insade">Выберите способ оплаты</div>
-												<div data-tabs class="tabs">
-													<nav data-tabs-titles class="tabs__navigation tabs-navigation-choise">
-														<button type="submit" class="tabs__title tabs-title-choise _tab-active"></button>
-														<button type="submit" class="tabs__title tabs-title-choise"></button>
-
-													</nav>
-													<div data-tabs-body class="tabs__content">
-														<div class="tabs__body">
-															<div class="choice-replenishment">
-																<div class="choice-replenishment__title">Сумма пополнения</div>
-																<div class="choice-replenishment__content">
-																	<div class="choice-replenishment__items">
-
-
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment' type='radio' />
-																			<label for='replenishment'>
-																				<span class="span-price">100 ₽</span>
-																				<span class="span-bonus">+50₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-1' type='radio' />
-																			<label for='replenishment-1'>
-																				<span class="span-price">300 ₽</span>
-																				<span class="span-bonus">+150₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-2' type='radio' />
-																			<label for='replenishment-2'>
-																				<span class="span-price">500 ₽</span>
-																				<span class="span-bonus">+250₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input-label">
-																			<input name="shoise" id='replenishment-3' type='radio' />
-																			<label for='replenishment-3'>
-																				<span class="span-price">1000 ₽</span>
-																				<span class="span-bonus">+500₽ бонус</span>
-																			</label>
-
-																		</div>
-																		<div class="choice-replenishment__input">
-																			<input class="replenishment-input" type="text" placeholder="Ввести сумму">
-																		</div>
-																	</div>
-																	<a class="button-save" href="message.html">Перейти к оплате</a>
-																</div>
-															</div>
-														</div>
-														<div class="tabs__body">
-															2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio
-															exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a
-															minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error
-															molestias!
-														</div>
-
-													</div>
+							<div class="cabinet__item-content-title">Личные данные</div>
+							<div class="cabinet__item-block ">
+								<div class="personal-data">
+									<div class="personal-data__items">
+										<div class="personal-data__item item-data-choise">
+											<div class="personal-data__item-title">Я</div>
+											<div class="personal-data__input-block">
+												<div class="personal-data__input-label">
+													<input name="choise" id='radio-1' type='radio' />
+													<label for='radio-1'><span></span>Частное лицо</label>
 												</div>
-
+												<div class="personal-data__input-label">
+													<input name="choise" id='radio-2' type='radio' />
+													<label for='radio-2'><span></span>Компания</label>
+												</div>
 											</div>
-											<div class="tabs__body">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum officia eius
-												sequi temporibus nostrum. Asperiores, atque? Quam est, unde, explicabo ipsum,
-												possimus quaerat incidunt officiis enim ducimus consequuntur rem.
-											</div>
-
 										</div>
+										<div class="personal-data__item">
+											<div class="personal-data__item-title">Имя</div>
+											<input autocomplete="off" type="text" placeholder="Константин" class="input">
+										</div>
+										<div class="personal-data__item">
+											<div class="personal-data__item-title">Фамилия</div>
+											<input autocomplete="off" type="text" placeholder="Константинович" class="input">
+										</div>
+										<div class="personal-data__item">
+											<div class="personal-data__item-title">Телефон</div>
+											<input autocomplete="off" type="phone" placeholder="+7 999 888 66 77" class="input">
+										</div>
+										<div class="personal-data__item">
+											<div class="personal-data__item-title">Почта</div>
+											<input autocomplete="off" type="phone" placeholder="test@test.ru" class="input">
+										</div>
+										<div class="personal-data__item">
+											<div class="personal-data__item-title">Пароль</div>
+											<input autocomplete="off" type="password" placeholder="" class="input">
+											<button class="button-password-ibg">
+												<img src="img/popap/eye.slash.svg">
+											</button>
+										</div>
+										<a class="button-save" href="message.html">Сохранить изменения</a>
 									</div>
-
 								</div>
+
 							</div>
+						</div>
+						<div class="cabinet__item-content">
+							<div class="cabinet__item-content-title">Общие настройки</div>
+							<div class="cabinet__item-block ">
+								<div class="general-settings">
+									<div class="general-settings__block">
+										<div class="general-settings__title-block">
+											<div class="general-settings__input-label">
+												<input id='settings' type='checkbox' />
+												<label for='settings'><span></span></label>
+											</div>
+											<div class="general-settings__title">Показывать мой телефон в объявлениях</div>
+										</div>
+
+									</div>
+									<div class="general-settings__block">
+										<div class="general-settings__title-block">
+											<div class="general-settings__input-label">
+												<input id='settings-1' type='checkbox' />
+												<label for='settings-1'><span></span></label>
+											</div>
+											<div class="general-settings__title">Безопасные сделки</div>
+										</div>
+										<div class="general-settings__text">Активируйте, чтобы ваши товары были доступны для
+											продажи по безопасной сделке с онлайн оплатой.</div>
+									</div>
+									<div class="general-settings__block">
+										<div class="general-settings__title-block">
+											<div class="general-settings__input-label">
+												<input id='settings-2' type='checkbox' />
+												<label for='settings-2'><span></span></label>
+											</div>
+											<div class="general-settings__title">Показывать мой телефон в объявлениях</div>
+										</div>
+
+									</div>
+								</div>
+								<a class="button-save" href="#">Сохранить изменения</a>
+							</div>
+
 						</div>
 					</div>
 				</div>
