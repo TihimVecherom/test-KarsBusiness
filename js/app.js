@@ -3261,18 +3261,6 @@
                 }
             });
         },
-        9399: (__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-            "use strict";
-            var $ = __webpack_require__(4761);
-            var forEach = __webpack_require__(1269);
-            $({
-                target: "Array",
-                proto: true,
-                forced: [].forEach != forEach
-            }, {
-                forEach
-            });
-        },
         7543: (module, __unused_webpack_exports, __webpack_require__) => {
             "use strict";
             var toIndexedObject = __webpack_require__(3206);
@@ -7757,15 +7745,14 @@
         window.addEventListener("load", (function(e) {
             initSliders();
         }));
-        __webpack_require__(9399);
+        __webpack_require__(2352);
         __webpack_require__(3542);
         var can_use_dom = __webpack_require__(1807);
         var can_use_dom_default = __webpack_require__.n(can_use_dom);
+        __webpack_require__(4249);
+        __webpack_require__(7692);
         __webpack_require__(8165);
         __webpack_require__(7543);
-        __webpack_require__(7692);
-        __webpack_require__(2352);
-        __webpack_require__(4249);
         __webpack_require__(3344);
         __webpack_require__(7323);
         __webpack_require__(4079);
@@ -8225,9 +8212,9 @@
             return ResizeObserver;
         }();
         __webpack_require__(7985);
-        __webpack_require__(6618);
         __webpack_require__(9989);
         __webpack_require__(8307);
+        __webpack_require__(6618);
         __webpack_require__(4390);
         var getOptions = function getOptions(obj) {
             var options = Array.prototype.reduce.call(obj, (function(acc, attribute) {
@@ -8411,8 +8398,8 @@
                 };
                 this.el = element;
                 this.minScrollbarWidth = 20;
-                this.options = Object.assign({}, SimpleBar.defaultOptions, {}, options);
-                this.classNames = Object.assign({}, SimpleBar.defaultOptions.classNames, {}, this.options.classNames);
+                this.options = Object.assign({}, SimpleBar.defaultOptions, options);
+                this.classNames = Object.assign({}, SimpleBar.defaultOptions.classNames, this.options.classNames);
                 this.axis = {
                     x: {
                         scrollOffsetAttr: "scrollLeft",
@@ -9024,11 +9011,14 @@
                 AddInputField();
             }
         }));
-        let passBtn = document.querySelector(".button-password-ibg");
-        let passInput = document.querySelector(".input-popap-password");
-        passBtn.onclick = function() {
-            if ("password" === passInput.getAttribute("type")) passInput.setAttribute("type", "text"); else passInput.setAttribute("type", "password");
-        };
+        let passBtn = document.querySelectorAll(".button-password-ibg");
+        passBtn.forEach((function(btn) {
+            btn.onclick = function() {
+                let target = this.getAttribute("data-target");
+                let passInput = document.querySelector(target);
+                if ("password" === passInput.getAttribute("type")) passInput.setAttribute("type", "text"); else passInput.setAttribute("type", "password");
+            };
+        }));
         $(".select__options").wrap("<div class='new'></div>");
         !function(e, t) {
             if ("object" == typeof exports && "object" == typeof module) module.exports = t(); else if ("function" == typeof define && define.amd) define([], t); else {

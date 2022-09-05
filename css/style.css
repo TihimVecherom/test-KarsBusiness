@@ -1399,7 +1399,6 @@ h6 {
   background: #E1E0E1;
   border-radius: 5px;
   width: 7px;
-  padding-right: 50px;
 }
 
 .select__options::-webkit-scrollbar-thumb {
@@ -5921,6 +5920,10 @@ input[type=checkbox]:checked + label > ins {
   min-height: 41px !important;
   min-width: 230px !important;
   cursor: pointer;
+}
+
+.select-link-ad:focus {
+  background: white;
 }
 
 .button-search-sort {
